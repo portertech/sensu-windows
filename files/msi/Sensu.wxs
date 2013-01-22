@@ -32,8 +32,8 @@
 
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="WindowsVolume">
-        <Directory Id="INSTALLLOCATION" Name="opscode">
-          <Directory Id="SENSULOCATION" Name="chef" >
+        <Directory Id="INSTALLLOCATION" Name="opt">
+          <Directory Id="SENSULOCATION" Name="sensu" >
           </Directory>
         </Directory>
       </Directory>
@@ -42,8 +42,7 @@
     <DirectoryRef Id="SENSULOCATION">
       <Component Id="SensuBin" Guid="{7F663F88-55A2-4E20-82BF-8BD2E60BB83A}" >
         <!-- TODO remove [SENSULOCATION]\embedded\bin once SENSU-2681 is fixed -->
-        <Environment Id="Environment"
-                     Name="PATH" Action="set" Part="last" System="yes" Value="[SENSULOCATION]bin;[SENSULOCATION]\embedded\bin" />
+        <Environment Id="Environment" Name="PATH" Action="set" Part="last" System="yes" Value="[SENSULOCATION]\bin;[SENSULOCATION]\embedded\bin" />
       </Component>
     </DirectoryRef>
 
@@ -65,7 +64,7 @@
     <!--
       UI Stuff
     -->
-    <Icon Id="oc.ico" SourceFile="assets\oc_16x16.ico"/>
+    <Icon Id="oc.ico" SourceFile="assets\sensu_16x16.ico"/>
     <Property Id="ARPPRODUCTICON" Value="oc.ico" />
     <Property Id="ARPHELPLINK" Value="http://help.opscode.com/" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
@@ -82,10 +81,10 @@
     <WixVariable Id="WixUIDialogBmp" Value="assets\dialog_background.bmp" />
     <WixVariable Id="WixUIBannerBmp" Value="assets\banner_background.bmp" />
 
-    <WixVariable Id="WixUIExclamationIco" Value="assets\oc_32x32.ico" />
-    <WixVariable Id="WixUIInfoIco" Value="assets\oc_32x32.ico" />
-    <WixVariable Id="WixUINewIco" Value="assets\oc_16x16.ico" />
-    <WixVariable Id="WixUIUpIco" Value="assets\oc_16x16.ico" />
+    <WixVariable Id="WixUIExclamationIco" Value="assets\sensu_32x32.ico" />
+    <WixVariable Id="WixUIInfoIco" Value="assets\sensu_32x32.ico" />
+    <WixVariable Id="WixUINewIco" Value="assets\sensu_16x16.ico" />
+    <WixVariable Id="WixUIUpIco" Value="assets\sensu_16x16.ico" />
 
   </Product>
 </Wix>

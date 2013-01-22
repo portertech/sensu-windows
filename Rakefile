@@ -12,7 +12,7 @@ module Omnibus
                      "-loc C:\\opt\\sensu\\msi-tmp\\Sensu-en-us.wxl",
                      "C:\\opt\\sensu\\msi-tmp\\Sensu-Files.wixobj",
                      "C:\\opt\\sensu\\msi-tmp\\Sensu.wixobj",
-                     "-out C:\\opt\\sensu-#{build_version}-#{iteration}.msi"]
+                     "-out C:\\var\\cache\\omnibus\\pkg\\sensu-#{build_version}-#{iteration}.msi"]
       [msi_command.join(" "), {:returns => [0, 204]}]
     end
   end
