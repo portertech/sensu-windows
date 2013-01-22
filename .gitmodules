@@ -1,3 +1,6 @@
 [submodule "omnibus-software"]
 	path = omnibus-software
 	url = git://github.com/opscode/omnibus-software.git
+[submodule "omnibus-chef"]
+	path = omnibus-chef
+	url = git://github.com/opscode/omnibus-chef.git
