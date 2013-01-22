@@ -6,7 +6,7 @@ build do
   block do
     src_dir = self.project_dir
 
-    shell = Mixlib::ShellOut.new("heat.exe dir \"#{install_dir}\" -nologo -srd -gg -cg SensuDir -dr SENSULOCATION -var var.SensuSourceDir -out Sensu-Files.wxs", :cwd => src_dir)
+    shell = Mixlib::ShellOut.new("heat.exe dir \"C:\\opt\\sensu\" -nologo -srd -gg -cg SensuDir -dr SENSULOCATION -var var.SensuSourceDir -out Sensu-Files.wxs", :cwd => src_dir)
     shell.run_command
     shell.error!
   end
@@ -38,7 +38,7 @@ build do
   block do
     src_dir = self.project_dir
 
-    shell = Mixlib::ShellOut.new("candle.exe -nologo -out #{install_dir}\\msi-tmp\\ -dSensuSourceDir=\"#{install_dir}\" Sensu-Files.wxs Sensu.wxs", :cwd => src_dir)
+    shell = Mixlib::ShellOut.new("candle.exe -nologo -out C:\\opt\\sensu\\msi-tmp\\ -dSensuSourceDir=\"C:\\opt\\sensu\" Sensu-Files.wxs Sensu.wxs", :cwd => src_dir)
     shell.run_command
     shell.error!
   end
