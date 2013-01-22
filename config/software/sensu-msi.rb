@@ -31,9 +31,9 @@ build do
 
   end
 
-  command "xcopy Sensu-en-us.wxl #{install_dir}\\msi-tmp /Y", :cwd => source[:path]
+  command "robocopy Sensu-en-us.wxl #{install_dir}\\msi-temp\\ /MIR", :cwd => source[:path], :returns => [0, 1]
 
-  command "xcopy assets #{install_dir}\\msi-tmp\\assets /I /Y", :cwd => source[:path]
+  command "robocopy assets #{install_dir}\\msi-tmp\\assets /MIR", :cwd => source[:path], :returns => [0, 1]
 
   block do
     src_dir = self.project_dir
