@@ -30,8 +30,8 @@ build do
     }
   end
 
-  command "IF exist #{install_dir}\\msi-tmp (echo msi-tmp is found on the system) ELSE (mkdir #{install_dir}\\msi-tmp && echo msi-tmp directory is created.)"
-  
+  command "mkdir #{install_dir}\\msi-tmp"
+
   command "xcopy Sensu-en-us.wxl #{install_dir}\\msi-tmp /Y", :cwd => source[:path]
 
   command "xcopy assets #{install_dir}\\msi-tmp\\assets /I /Y", :cwd => source[:path]
