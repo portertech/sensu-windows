@@ -1,0 +1,42 @@
+GIT
+  remote: git://github.com/opscode/omnibus-ruby.git
+  revision: edbca8412ec19c21ea1c517dedbbb375bc5db453
+  specs:
+    omnibus (0.1)
+      fpm (= 0.3.11)
+      mixlib-shellout (~> 1.0)
+      ohai (>= 0.6.12)
+      rake (>= 0.9)
+      uber-s3
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    fpm (0.3.11)
+      json
+    ipaddress (0.8.0)
+    json (1.7.6)
+    mime-types (1.19)
+    mixlib-cli (1.3.0)
+    mixlib-config (1.1.2)
+    mixlib-log (1.4.1)
+    mixlib-shellout (1.1.0)
+    ohai (6.16.0)
+      ipaddress
+      mixlib-cli
+      mixlib-config
+      mixlib-log
+      mixlib-shellout
+      systemu
+      yajl-ruby
+    rake (10.0.3)
+    systemu (2.5.2)
+    uber-s3 (0.2.4)
+      mime-types (~> 1.17)
+    yajl-ruby (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  omnibus!

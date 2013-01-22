@@ -1,0 +1,3 @@
+[submodule "omnibus-software"]
+	path = omnibus-software
+	url = git://github.com/opscode/omnibus-software.git
