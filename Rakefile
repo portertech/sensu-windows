@@ -9,9 +9,9 @@ module Omnibus
                      "-nologo",
                      "-ext WixUIExtension",
                      "-cultures:en-us",
-                     "-loc #{install_path}\\msi-tmp\\Sensu-en-us.wxl",
-                     "#{install_path}\\msi-tmp\\Sensu-Files.wixobj",
-                     "#{install_path}\\msi-tmp\\Sensu.wixobj",
+                     "-loc C:\\opt\\sensu\\msi-tmp\\Sensu-en-us.wxl",
+                     "C:\\opt\\sensu\\msi-tmp\\Sensu-Files.wixobj",
+                     "C:\\opt\\sensu\\msi-tmp\\Sensu.wixobj",
                      "-out #{config.package_dir}\\sensu-#{build_version}-#{iteration}.msi"]
       [msi_command.join(" "), {:returns => [0, 204]}]
     end
