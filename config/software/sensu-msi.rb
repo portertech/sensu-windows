@@ -28,11 +28,10 @@ build do
         out.write(erb.result(binding))
       }
     }
+
+    command "xcopy #{project_dir}\\Sensu-en-us.wxl #{install_dir}\\msi-tmp /Y"
+    command "xcopy #{project_dir}\\assets #{install_dir}\\msi-tmp\\assets /I /Y"
   end
-
-  command "xcopy Sensu-en-us.wxl #{install_dir}\\msi-tmp /Y", :cwd => source[:path]
-
-  command "xcopy assets #{install_dir}\\msi-tmp\\assets /I /Y", :cwd => source[:path]
 
   block do
     src_dir = self.project_dir
